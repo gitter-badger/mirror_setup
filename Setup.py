@@ -21,7 +21,7 @@ def finished():
         finished()
 def get_images():
     print("Reading configuration...")
-    if get_64bit == True:
+    if iso_64bit == True:
         print("64-Bit ISO is 'True'!")
         print("=========================")
         print()
@@ -42,7 +42,7 @@ def get_images():
         print("This ISO has been ignored!")
         print("Directory creation is null!")
         print("ISO download is null!")
-    if get_32bit == True:
+    if iso_32bit == True:
         print("32-Bit ISO is 'True'!")
         print("=========================")
         print()
