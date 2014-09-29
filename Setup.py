@@ -75,8 +75,10 @@ def iso_directory():
     choose_iso = input("Which of the following would you like to have in your mirror?: ")
     if choose_iso == "1":
         iso_64Bit = True
+        iso_directory()
     elif choose_iso == "2":
         iso_32Bit = True
+        iso_directory()
     elif choose_iso == "Done" or "done":
         get_images
     else:
