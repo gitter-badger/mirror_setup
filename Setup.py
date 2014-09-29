@@ -18,9 +18,59 @@ def finished():
     else:
         print("'" + prompt + "' is an invalid option, please retry!")
         finished()
+def get_isos_online():
+    print("Reading configuration...")
+    if get_64bit == True:
+        print("64-Bit ISO is 'True'!")
+        print("=========================")
+        print()
+        print("Creating directory...")
+        cmd = "mkdir 64-Bit"
+        print("Creating directory... [Done]")
+        print("Fetching 64-Bit Image File...")
+        cmd = "cd 64-Bit"
+        cmd = "wget https://my-mirror.com/Debian/Debian-64-Bit.iso"
+        print("Fetching 64-Bit Image File... [Done]")
+        print("Cleaning up...")
+        cmd = "cd"
+        print("Cleaning up... [Done]")
+    else:
+        print("64-Bit ISO is 'False'!")
+        print("=========================")
+        print()
+        print("This ISO has been ignored!")
+        print("Directory creation is null!")
+        print("ISO download is null!")
+    if get_32bit == True:
+        print("32-Bit ISO is 'True'!")
+        print("=========================")
+        print()
+        print("Creating directory...")
+        cmd = "mkdir 32-Bit"
+        print("Creating directory... [Done]")
+        print("Fetching 32-Bit Image File...")
+        cmd = "cd 32-Bit"
+        cmd = "wget https://my-mirror.com/Debian/Debian-32-Bit.iso"
+        print("Fetching 32-Bit Image File... [Done]")
+        print("Cleaning up...")
+        cmd = "cd"
+        print("Cleaning up... [Done]")
+    else:
+        print("32-Bit ISO is 'False'!")
+        print("=========================")
+        print()
+        print("This ISO has been ignored!")
+        print("Directory creation is null!")
+        print("ISO download is null!")
+finished()
+def iso_directory():
+    print("List of all isos available:")
+    print()
+    print("")
 def fetch_isos():
   prompt = input("Would you like to fetch the .isos now?")
   if prompt = "yes" or "Yes":
+      iso_directory()
       print("Fetching files now (.isos/disk-images)...")
       print("Fetching 64-Bit .iso/disk-image...")
       cmd = "cd 64-Bit"
