@@ -16,7 +16,7 @@ def update_status():
         cmd = "nano Status"
         bye()
     elif prompt == "no" or "No":
-        print("'Status' will not be changed.")
+        print("'Status' will not be changed. [Skipped]")
         bye()
     else:
         print("'" + prompt + "' is an invalid option, please retry!")
@@ -29,8 +29,10 @@ def update_html():
         'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
         cmd = "cd"
         cmd = "nano index.html"
+        update_status()
     elif prompt == "no" or "No":
-        print("'index.html' will not be changed.")
+        print("'index.html' will not be changed. [Skipped]")
+        update_status()
     else:
         print("'" + prompt + "' is an invalid option, please retry!")
         update_html()
@@ -127,7 +129,7 @@ def getfiles_html():
       print("fetching files using Wget... [Done]")
   elif prompt == "git":
       print("Cloning Git repository...")
-      cmd = "git clone https://github.com/DeavmiOSS/mirror_service.git"
+      cmd = "git clone https://github.com/DeavmiOSS/mirror_service.git \"
       print("Cloning Git repository... [Done]")
   else:
       print("'" + prompt + "' is an invalid option, please retry!")
