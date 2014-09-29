@@ -14,6 +14,7 @@ def update_status():
         'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
         cmd = "cd"
         cmd = "nano Status"
+        bye()
     elif prompt == "no" or "No":
         print("'Status' will not be changed.")
         bye()
