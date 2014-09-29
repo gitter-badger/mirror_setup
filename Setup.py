@@ -2,12 +2,26 @@
 print("DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above")
 def bye():
     print()
+    print("Your mirror has been setup!")
+    print()
     print("Thank you for uisng this tool!")
     print()
     exit()
-def finished():
+def update_status():
     print()
-    print("Your mirror has been setup!")
+    prompt = input("Change the 'Status' file to display True recordxs? (Y/n): ")
+    if prompt == "yes" or "Yes":
+        'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
+        cmd = "cd"
+        cmd = "nano Status"
+    elif prompt == "no" or "No":
+        print("'Status' will not be changed.")
+        bye()
+    else:
+        print("'" + prompt + "' is an invalid option, please retry!")
+        update_status()
+def update_html():
+    print()
     print("We recommend you change the 'index.html' file to your needs.")
     prompt = input("Change 'index.html' file now?: ")
     if prompt == "yes" or "Yes":
@@ -15,10 +29,10 @@ def finished():
         cmd = "cd"
         cmd = "nano index.html"
     elif prompt == "no" or "No":
-        bye()
+        print("'index.html' will not be changed.")
     else:
         print("'" + prompt + "' is an invalid option, please retry!")
-        finished()
+        update_html()
 def get_images():
     print("Reading configuration...")
     if iso_64bit == True:
