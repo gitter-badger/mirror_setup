@@ -19,7 +19,7 @@ def finished():
     else:
         print("'" + prompt + "' is an invalid option, please retry!")
         finished()
-def get_isos_online():
+def get_images():
     print("Reading configuration...")
     if get_64bit == True:
         print("64-Bit ISO is 'True'!")
@@ -67,7 +67,21 @@ finished()
 def iso_directory():
     print("List of all isos available:")
     print()
-    print("")
+    print("1. 64-Bit")
+    print("2. 32-Bit")
+    print()
+    print("Type 'done' when you are done adding the iso image files.")
+    print()
+    choose_iso = input("Which of the following would you like to have in your mirror?: ")
+    if choose_iso == "1":
+        iso_64Bit = True
+    elif choose_iso == "2":
+        iso_32Bit = True
+    elif choose_iso == "Done" or "done":
+        get_images
+    else:
+        print("'" + prompt + "' is an invalid option, please retry!")
+        iso_directory()
 def fetch_isos():
   prompt = input("Would you like to fetch the .isos now?")
   if prompt = "yes" or "Yes":
