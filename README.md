@@ -1,6 +1,8 @@
 mirror_setup
 ============
 
+[![Build Status](https://travis-ci.org/DeavmiOSS/mirror_setup.svg?branch=master)](https://travis-ci.org/DeavmiOSS/mirror_setup)
+
 The setup script we use to create our mirrors.
 
 ##Guide
