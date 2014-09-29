@@ -10,6 +10,7 @@ def finished():
     print("We recommend you change the 'index.html' file to your needs.")
     prompt = input("Change 'index.html' file now?: ")
     if prompt == "yes" or "Yes":
+        'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
         cmd = "cd"
         cmd = "nano index.html"
     elif prompt == "no" or "No":
