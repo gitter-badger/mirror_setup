@@ -3,9 +3,21 @@ print("DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above")
 print("Making directories...")
 cmd = "mkdir 64-Bit"
 cmd = "mkdir 32-Bit"
+def bye():
+    print("Thank you for uisng this tool!")
 def finished():
     print("Your mirror has been setup!")
-def fetch_isos()
+    print("We recommend you change the 'index.html' file to your needs.")
+    prompt = input("Change 'index.html' file now?: ")
+    if prompt == "yes" or "Yes":
+        cmd = "cd"
+        cmd = "nano index.html"
+    elif prompt == "no" or "No":
+        bye()
+    else:
+        print("'" + prompt + "' is an invalid option, please retry!")
+        finished()
+def fetch_isos():
   prompt = input("Would you like to fetch the .isos now?")
   if prompt = "yes" or "Yes":
       print("Fetching files now (.isos/disk-images)...")
