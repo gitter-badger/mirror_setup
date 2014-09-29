@@ -1,11 +1,12 @@
 'DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above'
 print("DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above")
-print("Making directories...")
-cmd = "mkdir 64-Bit"
-cmd = "mkdir 32-Bit"
 def bye():
+    print()
     print("Thank you for uisng this tool!")
+    print()
+    exit()
 def finished():
+    print()
     print("Your mirror has been setup!")
     print("We recommend you change the 'index.html' file to your needs.")
     prompt = input("Change 'index.html' file now?: ")
@@ -101,5 +102,15 @@ def getfiles_html():
       print("'" + prompt + "' is an invalid option, please retry!")
       getfiles_html()
   fetch_isos()
-'Start the getting the files'
-getfiles_html()
+print()
+def app_start():
+    prompt = input("Setup miror now? (Y/n): ")
+    if prompt == "Y" or "y":
+        getfiles_html()
+    elif prompt == "N" or "n":
+        bye()
+    else:
+        print("'" + prompt + "' is an invalid option, please retry!")
+        app_start()
+'Start the application'
+app_start()
