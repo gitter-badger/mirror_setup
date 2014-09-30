@@ -1,20 +1,23 @@
 'DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above'
 import subprocess
+class Configuration():
+    default_text_editor = "nano"
+config = Configuration()
 print("DeavmiOSS Mirror Python Setup Script - GNU GPL v3.0 or above")
 def bye():
     print()
     print("Your mirror has been setup!")
     print()
-    print("Thank you for uisng this tool!")
+    print("Thank you for using this tool!")
     print()
     exit()
 def update_status():
     print()
-    prompt = input("Change the 'Status' file to display True recordxs? (Y/n): ")
+    prompt = input("Change the 'Status' file to display True records? (Y/n): ")
     if prompt == "yes" or "Yes":
         'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
         subprocess.Popen("cd")
-        subprocess.Popen("nano Status")
+        subprocess.Popen(config.default_text_editor + " Status")
         bye()
     elif prompt == "no" or "No":
         print("'Status' will not be changed. [Skipped]")
@@ -29,7 +32,7 @@ def update_html():
     if prompt == "yes" or "Yes":
         'Credits to this page here, for helping with the cd command - <http://techie-buzz.com/foss/how-to-go-back-to-previous-directory-and-home-directory-in-linux-shell-or-putty.html>'
         subprocess.Popen("cd")
-        subprocess.Popen("nano index.html")
+        subprocess.Popen(config.default_text_editor + " index.html")
         update_status()
     elif prompt == "no" or "No":
         print("'index.html' will not be changed. [Skipped]")
