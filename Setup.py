@@ -91,7 +91,7 @@ def get_images():
         print("This ISO has been ignored!")
         print("Directory creation is null!")
         print("ISO download is null!")
-finished()
+        finished()
 
 def iso_directory():
 
