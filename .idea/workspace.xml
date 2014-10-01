@@ -284,7 +284,11 @@
       <created>1412177595390</created>
       <updated>1412177595390</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Indented text/code `finished()`.">
+      <created>1412177838092</created>
+      <updated>1412177838092</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
